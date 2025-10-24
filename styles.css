@@ -1,0 +1,296 @@
+
+:root {
+    /* Colores Personalizables para Temática Geo/GIS */
+    --color-primary: #1e88e5; /* Azul Profundo (para acentos, como el color del mar en un mapa) */
+    --color-secondary: #4caf50; /* Verde Esmeralda (para botones y hover, simbolizando la tierra/datos) */
+    --color-background: #ffffff; /* Fondo principal (blanco) */
+    --color-text: #37474f; /* Texto principal (gris pizarra oscuro) */
+    --color-alt-background: #e3f2fd; /* Fondo alternativo (azul claro, como un mapa base) */
+    --color-card-background: #ffffff; /* Fondo de tarjetas */
+
+    /* Fuentes */
+    --font-family-sans: 'Arial', sans-serif; /* Puedes cambiar a 'Roboto', 'Lato' si quieres un look más moderno */
+    
+    /* Espaciado */
+    --spacing-lg: 80px;
+    --spacing-md: 40px;
+    --spacing-sm: 20px;
+    --border-radius: 6px; /* Bordes ligeramente más nítidos */
+}
+
+/* CAMBIO ADICIONAL: Resaltar iconos de habilidades con el color secundario */
+.cv-skills li i {
+    color: var(--color-secondary);
+    margin-right: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family-sans);
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: var(--color-background);
+    scroll-behavior: smooth;
+}
+
+/* ---------------------------------- */
+/* 2. Encabezado y Navegación */
+/* ---------------------------------- */
+.main-header {
+    background-color: var(--color-background);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Sombra suave */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-primary);
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--color-text);
+    margin-left: var(--spacing-sm);
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: var(--color-primary);
+}
+
+/* ---------------------------------- */
+/* 3. Secciones y Títulos */
+/* ---------------------------------- */
+section {
+    padding: var(--spacing-lg) 10vw; /* Padding lateral ajustable */
+    text-align: center;
+}
+
+.section-padding {
+    padding: var(--spacing-lg) 10vw;
+}
+
+.background-alt {
+    background-color: var(--color-alt-background);
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-primary);
+    position: relative;
+    display: inline-block;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 3px;
+    background-color: var(--color-secondary);
+    margin: 10px auto 0;
+}
+
+
+/* ---------------------------------- */
+/* 4. Hero/Inicio */
+/* ---------------------------------- */
+.hero-section {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: var(--spacing-lg) 10vw;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-sm);
+}
+
+.hero-content .subtitle {
+    font-size: 1.2rem;
+    color: #7f8c8d; /* Gris suave */
+    margin-bottom: var(--spacing-md);
+}
+
+/* Información de Contacto */
+.contact-info p {
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.social-links a {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--color-secondary);
+}
+
+/* ---------------------------------- */
+/* 5. Botones (CTA) */
+/* ---------------------------------- */
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: var(--spacing-sm);
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.primary-btn {
+    background-color: var(--color-primary);
+    color: white;
+    border: 2px solid var(--color-primary);
+}
+
+.primary-btn:hover {
+    background-color: var(--color-secondary);
+    border-color: var(--color-secondary);
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+}
+
+.secondary-btn:hover {
+    background-color: var(--color-primary);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.small-btn {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+}
+
+/* ---------------------------------- */
+/* 6. Portafolio y Blog Grid */
+/* ---------------------------------- */
+.portfolio-grid, .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.project-card, .blog-post-card {
+    background-color: var(--color-card-background);
+    padding: var(--spacing-sm);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    margin-bottom: 15px;
+}
+
+.project-card h3 {
+    font-size: 1.4rem;
+    color: var(--color-text);
+    margin-bottom: 10px;
+}
+
+/* ---------------------------------- */
+/* 7. CV y Habilidades */
+/* ---------------------------------- */
+.cv-layout {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--spacing-md);
+    text-align: left;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.cv-skills, .cv-achievements {
+    flex: 1;
+    padding: var(--spacing-sm);
+    background-color: var(--color-card-background);
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.cv-skills ul, .cv-achievements ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.cv-skills li, .cv-achievements li {
+    margin-bottom: 10px;
+    padding-left: 0;
+}
+
+/* ---------------------------------- */
+/* 8. Pie de Página */
+/* ---------------------------------- */
+footer {
+    background-color: #0d47a1; /* Azul muy oscuro/índigo */
+    color: white;
+    text-align: center;
+    padding: var(--spacing-sm);
+    font-size: 0.9rem;
+}
+
+/* ---------------------------------- */
+/* 9. Media Queries (Responsividad) */
+/* ---------------------------------- */
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+    }
+    .main-nav a {
+        margin: 0 5px;
+        font-size: 0.9rem;
+    }
+    section {
+        padding: var(--spacing-md) 5vw;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    .cv-layout {
+        flex-direction: column;
+    }
+}
