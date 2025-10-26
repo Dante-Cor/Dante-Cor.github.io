@@ -3,6 +3,7 @@
     /* Colores Personalizables para Temática Geo/GIS */
     --color-primary: #1e88e5; /* Azul Profundo (para acentos, como el color del mar en un mapa) */
     --color-secondary: #4caf50; /* Verde Esmeralda (para botones y hover, simbolizando la tierra/datos) */
+    --color-tertiary: #1B4F72;
     --color-background: #ffffff; /* Fondo principal (blanco) */
     --color-text: #37474f; /* Texto principal (gris pizarra oscuro) */
     --color-alt-background: #e3f2fd; /* Fondo alternativo (azul claro, como un mapa base) */
@@ -53,12 +54,6 @@ body {
     z-index: 1000;
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--color-primary);
-}
-
 .main-nav a {
     text-decoration: none;
     color: var(--color-text);
@@ -69,6 +64,19 @@ body {
 
 .main-nav a:hover {
     color: var(--color-primary);
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--color-tertiary);
+    display: flex; /* CAMBIO: Hace que el logo y el texto estén en la misma línea */
+    align-items: center; /* CAMBIO: Centra verticalmente el logo con el texto */
+}
+
+.header-logo {
+    height: 45px; /* Tamaño del logo. Ajusta si lo ves muy grande o pequeño */
+    margin-right: 1px; /* Espacio entre el logo y el texto */
 }
 
 /* ---------------------------------- */
