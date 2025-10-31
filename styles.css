@@ -192,7 +192,7 @@ h2::after {
 }
 
 .social-links a:hover {
-    color: var(--color-secondary);
+    color: var(--color-primary);
 }
 
 /* ---------------------------------- */
@@ -242,9 +242,13 @@ h2::after {
 /* ---------------------------------- */
 .portfolio-grid, .blog-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* Dos columnas iguales por defecto para pantallas grandes */
+    grid-template-columns: 1fr 1fr; 
     gap: var(--spacing-md);
     margin-top: var(--spacing-md);
+    max-width: 1200px; /* Opcional: limita el ancho máximo del grid para que no se extienda demasiado en monitores muy anchos */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .project-card, .blog-post-card {
@@ -304,6 +308,26 @@ h2::after {
     padding-left: 0;
 }
 
+.udg-logo {
+  width: 75px;
+  height: 75px;
+  background-image: url('/Img/logos.jpg'); /* Imagen 1 */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 30 auto; /* Centra el div horizontalmente */
+}
+
+.udg-gen {
+  width: 75px;
+  height: 75px;
+  background-image: url('/Img/Generation_Mexico_logo_NEW-BLUE.png'); /* Imagen 1 */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 30 auto; /* Centra el div horizontalmente */
+}
+
 /* ---------------------------------- */
 /* 8. Pie de Página */
 /* ---------------------------------- */
@@ -321,6 +345,9 @@ footer {
 @media (max-width: 768px) {
     .main-header {
         flex-direction: column;
+    }
+    .portfolio-grid, .blog-grid {
+        grid-template-columns: 1fr; 
     }
     .main-nav a {
         margin: 0 5px;
