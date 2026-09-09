@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dante Corona - Portafolio GeoDev & Software Engineer</title>
+    <title>Dante Corona - Portafolio Profesional</title>
     <link rel="icon" href="/img/geomatic_solutions_cover.jpg" type="image/x-icon" />
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -19,7 +19,7 @@
             <a href="#inicio">Inicio</a>
             <a href="#portafolio">Portafolio</a>
             <a href="#acerca-de-mi">Mi Trayectoria</a>
-            <a href="#cv">Stack & Habilidades</a>
+            <a href="#cv">CV</a>
             <a href="#blog">Blog</a> 
             <button id="theme-toggle" class="theme-btn" aria-label="Cambiar modo oscuro">
                 <i class="fas fa-moon"></i>
@@ -28,7 +28,7 @@
     </header>
 
     <main>
-        <!-- Inicio (Hero) -->
+        <!-- Inicio -->
         <section id="inicio" class="hero-section">
             <video autoplay muted loop playsinline class="background-video">
                 <source src="img/Animación_de_Imagen_para_Portafolio.mp4" type="video/mp4"> 
@@ -36,19 +36,18 @@
             </video>
             <div class="hero-content">
                 <h1>Hola, soy Dante Alejandro Corona Rodríguez</h1>
-                <p class="subtitle">Geospatial Software Engineer &bull; Full Stack Developer &bull; Spatial Data Engineer</p>
-                <p class="description">Transformando datos geoespaciales complejos y flujos de telemetría en arquitecturas de software eficientes, soluciones WebGIS interactivas y modelos escalables.</p>
-                
+                <p class="subtitle">Ingeniero Geomático con dominio en programación, transformando datos espaciales crudos en soluciones de Web Mapping escalables.</p>
+                <p class="subtitle">Geospatial Software Engineer | Full Stack Developer | Spatial Data Engineer</p>
                 <div class="contact-info">
                     <p><i class="fas fa-envelope"></i> dante.stun.rdz@gmail.com</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Zapopan / Guadalajara, Jal. México</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Guadalajara / Zapopan, Jal. México</p>
                     <div class="social-links">
                         <a href="https://www.linkedin.com/in/dantecoronardz/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
                         <a href="https://github.com/Dante-Cor" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="https://dante-cor.github.io/Mi-Mapa-ZMG.github.io/" target="_blank" title="Proyecto Destacado"><i class="fas fa-map"></i></a>
+                        <a href="https://dante-cor.github.io/Mi-Mapa-ZMG.github.io/" target="_blank" title="Mi Mapa ZMG"><i class="fas fa-map-marked-alt"></i></a>
                     </div>
                 </div>
-                <a href="#portafolio" class="btn primary-btn"><i class="fas fa-globe-americas"></i> Explorar Proyectos</a>
+                <a href="#portafolio" class="btn primary-btn"><i class="fas fa-globe-americas"></i> Explorar proyectos</a>
             </div>
         </section>
 
@@ -56,93 +55,123 @@
         <section id="portafolio" class="section-padding">
             <h2>Proyectos Destacados</h2>
             <div class="portfolio-grid">
-                
-                <!-- Mi Mapa ZMG -->
-                <div class="project-card highlight-card">
-                    <img src="/img/sendera.jpg" alt="Mi Mapa ZMG PWA">
+
+                <!-- 1. NUEVO: Mi Mapa ZMG -->
+                <div class="project-card">
+                    <img src="/img/mi_mapa_zmg.jpg" alt="Mi Mapa ZMG PWA">
                     <h3>Mi Mapa ZMG - WebGIS & Motor de Enrutamiento</h3>
-                    <p>Progressive Web App interactiva de transporte multimodal en la ZMG. Integra frontend en Leaflet.js/JavaScript, API REST en Spring Boot con algoritmo de Dijkstra en memoria, persistencia espacial en PostgreSQL/PostGIS y seguridad con Rate Limiting (Bucket4j).</p>
-                    <a href="https://dante-cor.github.io/Mi-Mapa-ZMG.github.io/" target="_blank" class="btn small-btn">Ver Proyecto & Demo</a>
+                    <p>Progressive Web App interactiva de transporte público en la ZMG. Integra frontend en Leaflet.js, API REST en Spring Boot con algoritmo de Dijkstra en memoria para cálculo de rutas, base de datos espacial en PostgreSQL/PostGIS y seguridad con Rate Limiting (Bucket4j).</p>
+                    <a href="https://dante-cor.github.io/Mi-Mapa-ZMG.github.io/" class="btn small-btn" target="_blank">Ver Proyecto & Demo</a>
                 </div>
 
-                <!-- Station Tagger & Filler -->
+                <!-- 2. NUEVO: Plugin PyQGIS -->
                 <div class="project-card">
-                    <img src="/img/Imagen1.jpg" alt="Plugin PyQGIS">
+                    <img src="/img/plugin_qgis.jpg" alt="Plugin PyQGIS">
                     <h3>Station Tagger & Filler (Plugin PyQGIS)</h3>
-                    <p>Herramienta de escritorio desarrollada con PyQGIS y PyQt (Qt Designer) para automatizar el preprocesamiento, validación lógica y etiquetado masivo de infraestructura vial, optimizando la generación de <em>ground truth</em> para redes neuronales y visión artificial.</p>
-                    <a href="https://github.com/Dante-Cor" target="_blank" class="btn small-btn">Ver Código</a>
+                    <p>Herramienta desarrollada en Python con interfaz en Qt Designer (PyQt) para automatizar el preprocesamiento, validación lógica y etiquetado masivo de infraestructura vial, optimizando flujos de trabajo y curación de datos para modelos de visión artificial.</p>
+                    <a href="https://github.com/Dante-Cor" class="btn small-btn" target="_blank">Ver Repositorio</a>
                 </div>
 
-                <!-- LiDAR Point Cloud Pipeline -->
+                <!-- 3. NUEVO: Segmentación LiDAR -->
                 <div class="project-card">
-                    <img src="/img/1761345675803-07163105-cc9d-4dbe-ad22-b3c6074f836b_1.jpg" alt="Pipeline LiDAR">
-                    <h3>Procesamiento & Segmentación de Nubes de Puntos LiDAR</h3>
-                    <p>Pipeline de ingeniería de datos en Python para el filtrado, reducción de ruido de suelo y segmentación individual de copas de árboles en nubes de puntos de 1 metro de resolución espacial.</p>
-                    <a href="https://github.com/Dante-Cor" target="_blank" class="btn small-btn">Ver Detalles</a>
+                    <img src="/img/lidar_segmentation.jpg" alt="Procesamiento LiDAR">
+                    <h3>Segmentación y Procesamiento de Nubes de Puntos LiDAR</h3>
+                    <p>Pipeline de datos en Python para el filtrado, reducción de ruido topográfico y segmentación individual de árboles a partir de nubes de puntos densas con sensor LiDAR de 1 metro de resolución.</p>
+                    <a href="https://github.com/Dante-Cor" class="btn small-btn" target="_blank">Ver Detalles</a>
                 </div>
 
-                <!-- Pet Me -->
+                <!-- 4. ORIGINAL: Precipitaciones -->
                 <div class="project-card">
-                    <img src="/img/PetMe.jpg" alt="Pet Me Full Stack">
-                    <h3>Pet Me - Plataforma Web Cloud Native</h3>
-                    <p>Aplicación web colaborativa con arquitectura backend desacoplada en Java (Spring Boot), persistencia relacional, seguridad basada en tokens y despliegue escalable en Google Cloud Run y AWS con Docker y CI/CD.</p>
-                    <a href="https://github.com/edr9719/pet-me.com" class="btn small-btn" target="_blank">Ver Repositorio</a>
+                    <img src="/img/1761345675803-07163105-cc9d-4dbe-ad22-b3c6074f836b_1.jpg" alt="Web Mapping App">
+                    <h3>Análisis Promedio de Precipitaciones en Guadalajara temporal de lluvias 2021</h3>
+                    <p>Mapa tematico usando <strong>QGIS/PYTHON</strong> para visualizar la precipitación en mm.</p>
+                    <a href="https://concepto.de/proyecto/" class="btn small-btn">Ver Demo</a>
                 </div>
 
-                <!-- Geotermia LST -->
+                <!-- 5. ORIGINAL: Sensores Remotos GEE -->
                 <div class="project-card">
-                    <img src="/img/Soledad.jpg" alt="Estimación LST QGIS">
-                    <h3>Estimación de LST con QGIS para Exploración Geotérmica</h3>
-                    <p>Replicación de metodología científica de teledetección para estimar Temperatura de Superficie Terrestre (LST) a partir de imágenes Landsat en campos geotérmicos de Jalisco y Michoacán.</p>
-                    <a href="https://github.com/Dante-Cor" class="btn small-btn" target="_blank">Ver Análisis</a>
+                    <img src="/img/Imagen1.jpg" alt="Script de Procesamiento">
+                    <h3>Automatización de Procesos de Sensores Remotos</h3>
+                    <p>Script en JavaScript en GEE para clasificar imágenes satelitales (Sentinel 2) utilizando un algoritmo de aprendizaje automático no supervisado (k means) y generar mapas de uso de suelo .</p>
+                    <a href="#" class="btn small-btn">Ver Código</a>
                 </div>
 
-                <!-- GEE Sensores Remotos -->
+                <!-- 6. ORIGINAL: Geotermia LST -->
                 <div class="project-card">
-                    <img src="/img/Los Negritos_page-0001.jpg" alt="Google Earth Engine Sentinel">
-                    <h3>Clasificación Espectral en Google Earth Engine</h3>
-                    <p>Script automatizado en JavaScript para clasificación no supervisada (k-means) sobre imágenes Sentinel-2 en GEE, generando cartografía temática de cobertura y uso de suelo.</p>
-                    <a href="https://github.com/Dante-Cor" class="btn small-btn" target="_blank">Ver Código</a>
+                    <img src="/img/Soledad.jpg" alt="Mapa tematico">
+                    <img src="/img/Los Negritos_page-0001.jpg" alt="Mapa tematico">
+                    <h3>Aplicación de teledeteción para estimación de Temperatura de Superficie (LST) con QGIS para Exploración Geotérmica</h3>
+                    <p>Este proyecto consistió en la replicación y adaptación de una metodología científica de percepción remota para la identificación de zonas con alto potencial geotérmico en los campos de "La Soledad" (Jalisco) y "Los Negritos" (Michoacán). Se migró el flujo de trabajo original(ArcGIS) a un entorno Open Source (QGIS), procesando imágenes satelitales Landsat 7 ETM+ para generar mapas de Temperatura de la Superficie Terrestre (LST).</p>
+                    <p>Metodología Implementada en QGIS:</p>
+                    <p>Pre-procesamiento y Calibración.</p>
+                    <p>Estimación de Emisividad Superficial.</p>
+                    <p>Recuperación de Temperatura (LST).</p>
+                    <p>Detección de Anomalías.</p>
+                    <a href="https://aws.amazon.com/es/what-is/repo/" class="btn small-btn">Ver Código</a>
+                </div>
+
+                <!-- 7. ORIGINAL: Agenda Telefónica -->
+                <div class="project-card">
+                    <img src="/img/Agenda-telefonica.jpg" alt="Script de Procesamiento">
+                    <img src="/img/Agenda-telefonica2.jpg" alt="Script de Procesamiento">
+                    <h3>Agenda telefónica</h3>
+                    <p>Agenda Telefónica básica en Java, siguiendo principios de Programación Orientada a Objetos (POO) y Buenas Prácticas de Diseño, como la Separación de Responsabilidades y el manejo de Excepciones Personalizadas.</p>
+                    <a href="https://github.com/Dante-Cor/Hackathon-2-agenda-telefonica" class="btn small-btn" target="_blank">Ver repositorio de GitHub</a>
+                </div>
+
+                <!-- 8. ORIGINAL: Sendera -->
+                <div class="project-card">
+                    <img src="/img/sendera.jpg" alt="Script de Procesamiento">
+                    <h3>Sendera</h3>
+                    <p>Landing page interactiva, con los principales productos y servicios de una tienda deportiva.</p>
+                    <a href="https://github.com/Druiz-leon/hackathon01" class="btn small-btn" target="_blank">Ver repositorio de GitHub</a>
+                </div>
+
+                <!-- 9. ORIGINAL: Pet Me -->
+                <div class="project-card">
+                    <img src="/img/PetMe.jpg" alt="Script de Procesamiento">
+                    <h3>Pet Me</h3>
+                    <p>Red social enfocada en la adopcion de mascotas.</p>
+                    <a href="https://github.com/edr9719/pet-me.com" class="btn small-btn" target="_blank">Ver repositorio de GitHub</a>
                 </div>
 
             </div>
         </section>
 
-        <!-- Trayectoria -->
+        <!-- Acerca de mí -->
         <section id="acerca-de-mi" class="section-padding background-alt">
             <h2>Mi Trayectoria</h2>
             <div class="about-content">
-                <p>Soy Ingeniero en Topografía Geomática y Desarrollador Full Stack con enfoque en la ciencia de datos espaciales y la ingeniería de software moderna. Mi trabajo se centra en construir soluciones que conectan la precisión cartográfica con la robustez del desarrollo web y la nube: desde arquitecturas backend en <strong>Java (Spring Boot)</strong> y entornos analíticos en <strong>Python</strong>, hasta indexación espacial masiva con <strong>Uber H3</strong>, bases de datos relacionales y espaciales (<strong>PostgreSQL/PostGIS</strong>) y visores interactivos en <strong>Leaflet.js</strong>.</p>
-                <p>Cuento con experiencia en el sector público y proyectos de infraestructura optimizando flujos de datos para visión artificial, telemetría IoT, procesamiento de nubes de puntos LiDAR y auditoría de software web. Me enfoco en aplicar principios de arquitectura limpia (SOLID, MVC), desarrollo asistido por IA y mejores prácticas de despliegue continuo (Docker, CI/CD).</p>
+                <p>Ingeniero en Topografía Geomática y Desarrollador Full Stack con enfoque en la ciencia de datos espaciales y desarrollo de software moderno. Competente en el diseño de pipelines de datos en Python, indexación territorial masiva con Uber H3, bases de datos relacionales y espaciales (PostgreSQL/PostGIS) y arquitecturas backend escalables en Java (Spring Boot) y APIs REST. Apasionado por integrar tecnologías emergentes, modelos de inteligencia artificial y buenas prácticas de desarrollo (Git, Docker, CI/CD, SCRUM) para crear plataformas escalables con alto impacto operativo.</p>
             </div>
         </section>
 
-        <!-- Stack & Habilidades -->
+        <!-- CV -->
         <section id="cv" class="section-padding">
-            <h2>Tech Stack & Habilidades</h2>
+            <h2>Tech Stack y Habilidades Geo</h2>
             <div class="cv-layout">
                 <div class="cv-skills">
-                    <h3>Tecnologías y Entornos</h3>
+                    <h3>Tecnologías Geoespaciales y Desarrollo</h3>
                     <ul>
-                        <li><i class="fas fa-map-marked-alt"></i> <strong>WebGIS & Mapeo:</strong> Leaflet.js, OpenLayers, QGIS, PyQGIS (PyQt / Qt Designer), Uber H3 Indexing.</li>
-                        <li><i class="fas fa-database"></i> <strong>Bases de Datos & Big Data:</strong> PostgreSQL, PostGIS, BigQuery GIS, SQL Server, MySQL, Modelado Relacional.</li>
-                        <li><i class="fas fa-code"></i> <strong>Backend & Software:</strong> Java 17, Spring Boot, Python, C#, .NET, Node.js, APIs RESTful, Arquitectura MVC, Principios SOLID.</li>
-                        <li><i class="fas fa-laptop-code"></i> <strong>Frontend & Web:</strong> JavaScript (ES6+), TypeScript, React, Next.js, HTML5, CSS3, Bootstrap.</li>
-                        <li><i class="fas fa-tools"></i> <strong>DevOps & Cloud:</strong> Docker, Git/GitHub, CI/CD, Google Cloud Run, AWS (EC2), Linux (Ubuntu/Debian).</li>
-                        <li><i class="fas fa-brain"></i> <strong>IA & Procesamiento Espacial:</strong> Machine Learning Supervisado, Vision Transformers (curación de datos), GDAL/OGR, Google Earth Engine, CloudCompare (LiDAR).</li>
+                        <li><i class="fas fa-map-marked-alt"></i> <strong>Web GIS / Mapeo:</strong> Leaflet.js, OpenLayers, QGIS, PyQGIS (PyQt), Uber H3 Indexing, ArcGIS.</li>
+                        <li><i class="fas fa-database"></i> <strong>Bases de Datos y Backend:</strong> PostgreSQL, PostGIS, BigQuery GIS, SQL Server, MySQL, APIs RESTful.</li>
+                        <li><i class="fas fa-code"></i> <strong>Desarrollo Core & Backend:</strong> Java 17, Spring Boot, Python, C#, .NET, JavaScript, TypeScript, React, Next.js.</li>
+                        <li><i class="fas fa-tools"></i> <strong>Herramientas y DevOps:</strong> Git/GitHub, Docker, Google Cloud Run, AWS (EC2), Linux (Ubuntu/Debian), CI/CD.</li>
+                        <li><i class="fas fa-satellite"></i> <strong>Procesamiento Geo & 3D:</strong> GDAL/OGR, GeoPandas, CloudCompare (LiDAR), Google Earth Engine (GEE).</li>
+                        <li><i class="fas fa-brain"></i> <strong>IA y Machine Learning:</strong> Vision Transformers (curación de datos), Machine Learning Supervisado, Redes Neuronales.</li>
                     </ul>
                 </div>
-
+                
                 <div class="cv-achievements">
-                    <h3>Formación & Certificaciones</h3>
+                    <h3>Logros Académicos y Certificaciones</h3>
                     <ul>
-                        <li><strong>Ingeniería en Topografía Geomática</strong> &bull; Universidad de Guadalajara (CUCEI, 2019 – 2024)</li>
-                        <li><strong>Bootcamp Desarrollador Java Full Stack Jr.</strong> &bull; Generation México (2025)</li>
+                        <li><strong>Ingeniería en Topografía Geomática</strong> &bull; Universidad de Guadalajara (CUCEI, 2019 – 2024)</li> 
+                        <li><strong>Bootcamp Desarrollador Java Full Stack Jr.</strong> &bull; Generation México (Sep 2025 – Dic 2025)</li>
                         <li><strong>Machine Learning Specialization</strong> &bull; Stanford University & DeepLearning.AI (2025)</li>
-                        <li><strong>Spatial Data Science and Applications</strong> &bull; Yonsei University (2025)</li>
-                        <li><strong>Big Data Emerging Technologies</strong> &bull; Yonsei University (2025)</li>
+                        <li><strong>Spatial Data Science and Applications & Big Data</strong> &bull; Yonsei University (2025)</li>
                         <li><strong>Inteligencia Artificial Aplicada a los GIS</strong> &bull; Instituto Ambiental GIS (2025)</li>
-                        <li><strong>Idiomas:</strong> Español (Nativo) &bull; Inglés (B2 Profesional)</li>
+                        <li><strong>Sistemas de Información Geográfica con QGIS</strong> &bull; Instituto Ambiental GIS (2025)</li>
+                        <li><strong>Teledetección Satelital con Google Earth Engine y R</strong> &bull; Instituto Ambiental GIS (2025)</li>
                     </ul>
                 </div>
             </div>
@@ -150,20 +179,20 @@
 
         <!-- Blog -->
         <section id="blog" class="section-padding background-alt">
-            <h2>Geoblog & Artículos Técnicos</h2>
+            <h2>Mi Geoblog y Reflexiones</h2>
             <div class="blog-grid">
                 <article class="blog-post-card">
-                    <h3>La Fusión de la Geomática, Big Data y el Desarrollo Moderno</h3>
+                    <h3>Reflexión: La Fusión de la Geomática y el Desarrollo Moderno</h3>
                     <p class="post-date">Publicado: Análisis Técnico</p>
-                    <p>Por qué el futuro de la ingeniería espacial ya no reside en el software GIS de escritorio aislado, sino en APIs distribuidas, indexación discreta (H3) y arquitecturas cloud en tiempo real.</p>
-                    <a href="https://dante-cor.github.io/Mi-Mapa-ZMG.github.io/" class="btn small-btn secondary-btn">Conocer Caso Mi Mapa ZMG</a>
+                    <p>El futuro de la Geomática trasciende el software de escritorio tradicional: la convergencia real ocurre en APIs distribuidas, indexación hexagonal discreta y arquitecturas en la nube preparadas para resolver retos de movilidad y territorio.</p>
+                    <a href="https://dante-cor.github.io/Mi-Mapa-ZMG.github.io/" class="btn small-btn secondary-btn">Ver Caso de Estudio</a>
                 </article>
             </div>
         </section>
     </main>
 
     <footer>
-        <p><i class="fas fa-globe"></i> &copy; 2026 Dante Alejandro Corona Rodríguez | Geospatial Software Engineer.</p>
+        <p><i class="fas fa-globe"></i> &copy; 2026 Dante Alejandro Corona Rodríguez | Portafolio GeoDev.</p>
     </footer>
 
     <script src="script.js"></script>
